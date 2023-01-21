@@ -13,3 +13,11 @@ def get_gender_users(data:dict) -> list:
     Returns:
         list: users get gender list
     """
+    a=[]
+    for i in range(len(data['results'])):
+        c=data['results'][i]['gender']
+        if c=='male':
+            a.append({"Male":1})
+        if c=="female":
+            a.append({"Female":0})
+    return a
